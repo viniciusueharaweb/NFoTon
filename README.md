@@ -12,7 +12,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/igorlrnc"><img src="https://avatars.githubusercontent.com/u/43149318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Igor Lourenço</b></sub></a><br /><a href="https://github.com/FotonTech/NFoTon/commits?author=igorlrnc" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/igorlrnc"><img src="https://avatars.githubusercontent.com/u/43149318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Igor Lourenço</b></sub></a><br /><a href="https://github.com/FotonTech/NFoTon/commits?author=igorlrnc" title="Code">💻</a> <a href="#ideas-igorlrnc" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-igorlrnc" title="Mentoring">🧑‍🏫</a> <a href="#projectManagement-igorlrnc" title="Project Management">📆</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/danielcunhac/"><img src="https://avatars.githubusercontent.com/u/28742636?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Cunha</b></sub></a><br /><a href="https://github.com/FotonTech/NFoTon/commits?author=danicunhac" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/allanneto"><img src="https://avatars.githubusercontent.com/u/54034635?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Allan Neto</b></sub></a><br /><a href="https://github.com/FotonTech/NFoTon/commits?author=allanneto" title="Code">💻</a> <a href="#ideas-allanneto" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
