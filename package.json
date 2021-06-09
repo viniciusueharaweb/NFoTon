@@ -17,6 +17,7 @@
     "husky": "^6.0.0"
   },
   "scripts": {
-    "postinstall": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"test was not configured\""
   }
 }
