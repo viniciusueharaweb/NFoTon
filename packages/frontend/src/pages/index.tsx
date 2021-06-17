@@ -1,5 +1,5 @@
-import Hello from "../components/Hello";
+import Hello from '../components/Hello'
 
-const IndexPage = () => <Hello />;
-
-export default IndexPage;
+export default function IndexPage() {
+  return <Hello />
+}
