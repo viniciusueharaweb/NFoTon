@@ -1,7 +1,7 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
+import { AppProps } from 'next/app'
+import Head from 'next/head'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -9,7 +9,5 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Component {...pageProps} />
     </>
-  );
+  )
 }
-
-export default MyApp;
