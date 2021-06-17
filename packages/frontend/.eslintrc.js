@@ -48,10 +48,11 @@ module.exports = {
     'no-console': 'error',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     react: {
-      version: 'latest',
+      version: 'detect',
     },
     'import/resolver': {
       alias: {
