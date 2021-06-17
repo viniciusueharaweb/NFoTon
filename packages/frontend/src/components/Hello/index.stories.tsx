@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import Hello from './index';
+import Hello from '.';
 
 export default {
   title: 'Components/Hello',
