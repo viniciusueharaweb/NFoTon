@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
-import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { DefaultTheme, ThemeProvider as StyledProvider } from 'styled-components'
 import variations, { VariantionType } from '../theme'
 import { getFromLS, setToLS } from '../utils/storage'
 
@@ -15,7 +15,7 @@ type ThemeContextData = {
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
 
-export const Theme = ({ children }: ThemeProps) => {
+export const ThemeProvider = ({ children }: ThemeProps) => {
   const [theme, setTheme] = useState<DefaultTheme>(variations.light)
   const [themeLoading, setThemeLoading] = useState(true)
 
@@ -32,7 +32,7 @@ export const Theme = ({ children }: ThemeProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, changeSelectedTheme, themeLoading }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <StyledProvider theme={theme}>{children}</StyledProvider>
     </ThemeContext.Provider>
   )
 }
