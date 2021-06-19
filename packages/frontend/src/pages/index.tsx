@@ -1,5 +1,7 @@
-import Hello from "../components/Hello";
+import Hello from '../components/Hello'
+import { useTheme } from '../hooks/useTheme'
 
-const IndexPage = () => <Hello />;
-
-export default IndexPage;
+export default function IndexPage() {
+  const { themeLoading } = useTheme()
+  return !themeLoading && <Hello />
+}

@@ -1,18 +1,16 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
-import Hello from "./index";
+import { Meta, Story } from '@storybook/react'
+
+import Hello from '.'
 
 export default {
-  title: "Components/Hello",
+  title: 'Components/Hello',
   component: Hello,
   argTypes: {},
-} as Meta;
+} as Meta
 
-const Template: Story = () => {
-  return <Hello />;
-};
+const Template: Story = () => <Hello />
 
-export const HelloTemplate = Template.bind({});
+export const HelloTemplate = Template.bind({})
 
-HelloTemplate.parameters = {};
-HelloTemplate.args = {};
+HelloTemplate.parameters = {}
+HelloTemplate.args = {}

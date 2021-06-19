@@ -1,18 +1,25 @@
-import { ReactNode } from "react";
-import { Container } from "./styles";
+import { ReactNode } from 'react'
+import { useTheme } from '../../hooks/useTheme'
+
+import { Container } from './styles'
 
 interface HelloProps {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
-function Hello({ children }: HelloProps) {
+export default function Hello({ children }: HelloProps) {
+  const {
+    theme: { name },
+    changeSelectedTheme,
+  } = useTheme()
+
   return (
     <Container>
       <h1>Hello Noia 😎</h1>
       {children}
-      <span>teste</span>
+      <button onClick={() => changeSelectedTheme('dark')}>Dark theme</button>
+      <button onClick={() => changeSelectedTheme('light')}>Light theme</button>
+      <span>{`Tema atual: ${name}`}</span>
     </Container>
-  );
+  )
 }
-
-export default Hello;

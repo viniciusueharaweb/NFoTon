@@ -1,25 +1,18 @@
-import Document, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        });
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+        })
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx)
 
       return {
         ...initialProps,
@@ -29,9 +22,9 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      };
+      }
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
 
@@ -40,6 +33,11 @@ export default class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <meta charSet="utf-8" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
           <link rel="stylesheet" href="https://use.typekit.net/ewc7upu.css" />
         </Head>
         <body>
@@ -47,6 +45,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
