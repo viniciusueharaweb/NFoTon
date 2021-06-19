@@ -33,6 +33,11 @@ export default class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <meta charSet="utf-8" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
           <link rel="stylesheet" href="https://use.typekit.net/ewc7upu.css" />
         </Head>
         <body>
