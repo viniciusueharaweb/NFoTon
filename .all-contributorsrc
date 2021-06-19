@@ -53,6 +53,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "igorlourenco",
+      "name": "Igor Lourenço",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43149318?v=4",
+      "profile": "http://igorlouren.co",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
