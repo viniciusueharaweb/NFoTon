@@ -2,12 +2,16 @@ import { DefaultTheme } from 'styled-components'
 import { colors } from './colors'
 
 const {
-  neutrals: { white, black },
+  neutrals: { white, black, gray },
 } = colors
 
 export const light: DefaultTheme = {
   name: 'light',
-  backgroundColor: colors.neutrals.white['400'],
+  background: {
+    primary: colors.neutrals.white['400'],
+    secondary: gray['500'],
+    hover: black['400'],
+  },
   typography: {
     color: black['400'],
   },
@@ -15,7 +19,7 @@ export const light: DefaultTheme = {
 
 export const dark: DefaultTheme = {
   name: 'dark',
-  backgroundColor: black['500'],
+  background: { primary: black['500'], secondary: gray['500'], hover: black['400'] },
   typography: {
     color: white['400'],
   },
