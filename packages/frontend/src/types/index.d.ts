@@ -1,4 +1,5 @@
 import 'styled-components'
+import { Breakpoints } from '../theme/breakpoints'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -7,10 +8,12 @@ declare module 'styled-components' {
       primary: string
       secondary: string
       hover: string
+      border: string
     }
     typography: {
       color: string
       secondaryColor: string
     }
+    breakpoints: Breakpoints
   }
 }
