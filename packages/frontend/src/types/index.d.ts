@@ -10,6 +10,7 @@ declare module 'styled-components' {
     }
     typography: {
       color: string
+      secondaryColor: string
     }
   }
 }

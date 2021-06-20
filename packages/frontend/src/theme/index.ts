@@ -14,6 +14,7 @@ export const light: DefaultTheme = {
   },
   typography: {
     color: black['400'],
+    secondaryColor: white['500'],
   },
 }
 
@@ -22,6 +23,7 @@ export const dark: DefaultTheme = {
   background: { primary: black['500'], secondary: gray['500'], hover: black['400'] },
   typography: {
     color: white['400'],
+    secondaryColor: white['500'],
   },
 }
 const variations = { light, dark }
