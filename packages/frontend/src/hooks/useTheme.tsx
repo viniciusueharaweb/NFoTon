@@ -1,6 +1,7 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
 import { DefaultTheme, ThemeProvider as StyledProvider } from 'styled-components'
-import variations, { VariantionType } from '../theme'
+import theme from '../theme'
+import { VariantionType } from '../types'
 import { getFromLS, setToLS } from '../utils/storage'
 
 type ThemeProps = {
@@ -9,6 +10,7 @@ type ThemeProps = {
 
 type ThemeContextData = {
   theme: DefaultTheme
+  selectedThemeVariant: VariantionType
   themeLoading: boolean
   changeSelectedTheme(theme: VariantionType): void
 }
@@ -16,22 +18,24 @@ type ThemeContextData = {
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
 
 export const ThemeProvider = ({ children }: ThemeProps) => {
-  const [theme, setTheme] = useState<DefaultTheme>(variations.light)
+  const [selectedThemeVariant, setSelectedThemeVariant] = useState<VariantionType>('light')
   const [themeLoading, setThemeLoading] = useState(true)
 
   useEffect(() => {
     const themeName: VariantionType = getFromLS({ key: '@nfoton/selected-theme' })
-    setTheme(variations[themeName] || variations.light)
+    setSelectedThemeVariant(themeName || 'light')
     setThemeLoading(false)
   }, [])
 
   const changeSelectedTheme = (themeName: VariantionType) => {
-    setTheme(variations[themeName])
+    setSelectedThemeVariant(themeName)
     setToLS({ key: '@nfoton/selected-theme', themeName })
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, changeSelectedTheme, themeLoading }}>
+    <ThemeContext.Provider
+      value={{ theme, selectedThemeVariant, themeLoading, changeSelectedTheme }}
+    >
       <StyledProvider theme={theme}>{children}</StyledProvider>
     </ThemeContext.Provider>
   )

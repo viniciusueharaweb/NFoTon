@@ -8,7 +8,7 @@ export const Container = styled.button`
   }
   &:hover {
     svg {
-      stroke: ${({ theme }) => theme.background.hover};
+      stroke: ${({ theme }) => theme.colors.neutrals.black['400']};
     }
   }
 `

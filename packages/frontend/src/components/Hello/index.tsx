@@ -8,10 +8,7 @@ interface HelloProps {
 }
 
 export default function Hello({ children }: HelloProps) {
-  const {
-    theme: { name },
-    changeSelectedTheme,
-  } = useTheme()
+  const { selectedThemeVariant, changeSelectedTheme } = useTheme()
 
   return (
     <Container>
@@ -19,7 +16,7 @@ export default function Hello({ children }: HelloProps) {
       {children}
       <button onClick={() => changeSelectedTheme('dark')}>Dark theme</button>
       <button onClick={() => changeSelectedTheme('light')}>Light theme</button>
-      <span>{`Tema atual: ${name}`}</span>
+      <span>{`Tema atual: ${selectedThemeVariant}`}</span>
     </Container>
   )
 }

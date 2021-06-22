@@ -11,7 +11,7 @@ interface BurgerIconProps extends IconBaseProps {
 
 export default function BurgerIcon({ variant, size = 20, ...rest }: BurgerIconProps) {
   const { theme } = useTheme()
-  const baseStyle = { ...rest, size, color: theme.background.secondary }
+  const baseStyle = { ...rest, size, color: theme.colors.neutrals.gray['500'] }
   return (
     <Container>
       {variant === 'closed' && <HiOutlineMenuAlt4 {...baseStyle} />}
