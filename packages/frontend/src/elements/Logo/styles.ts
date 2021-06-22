@@ -26,5 +26,11 @@ export const LogoName = styled.span`
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
-  color: ${({ theme }) => theme.colors.neutrals.black['400']};
+  color: ${({
+    theme: {
+      colors: {
+        neutrals: { black },
+      },
+    },
+  }) => black['400']};
 `
