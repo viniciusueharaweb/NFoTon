@@ -1,16 +1,11 @@
 import 'styled-components'
+import { Colors } from '../theme/colors'
+
+export type VariantionType = 'light' | 'dark'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    name: string
-    background: {
-      primary: string
-      secondary: string
-      hover: string
-    }
-    typography: {
-      color: string
-      secondaryColor: string
-    }
+    variant: VariantionType
+    colors: Colors
   }
 }
