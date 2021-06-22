@@ -14,6 +14,22 @@ declare module 'styled-components' {
       color: string
       secondaryColor: string
     }
+    buttons: {
+      primary: {
+        color: string
+        backgroundColor: string
+      }
+    }
+    notifications: {
+      typography: {
+        color: {
+          title
+          subtitle
+          date
+        }
+      }
+      hover: string
+    }
     breakpoints: Breakpoints
   }
 }

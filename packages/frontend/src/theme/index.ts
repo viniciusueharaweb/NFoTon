@@ -18,6 +18,22 @@ export const light: DefaultTheme = {
     color: black['400'],
     secondaryColor: white['500'],
   },
+  buttons: {
+    primary: {
+      color: colors.neutrals.white['400'],
+      backgroundColor: colors.primary.blue,
+    },
+  },
+  notifications: {
+    typography: {
+      color: {
+        title: black['500'],
+        subtitle: gray['600'],
+        date: gray['500'],
+      },
+    },
+    hover: white['500'],
+  },
   breakpoints: { ...breakpoints },
 }
 
@@ -33,8 +49,25 @@ export const dark: DefaultTheme = {
     color: white['400'],
     secondaryColor: white['500'],
   },
+  buttons: {
+    primary: {
+      color: colors.neutrals.white['400'],
+      backgroundColor: colors.primary.blue,
+    },
+  },
+  notifications: {
+    typography: {
+      color: {
+        title: black['500'],
+        subtitle: gray['600'],
+        date: gray['500'],
+      },
+    },
+    hover: white['500'],
+  },
   breakpoints: { ...breakpoints },
 }
+
 const variations = { light, dark }
 
 export type VariantionType = keyof typeof variations
