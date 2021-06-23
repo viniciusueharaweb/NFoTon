@@ -1,8 +1,8 @@
 import * as S from './styles'
 
 export type LabelProps = {
-  variant: 'solid' | 'outlined'
-  color: 'default' | 'popular' | 'new' | 'featured' | 'soon'
+  variant?: 'solid' | 'outlined'
+  color?: 'default' | 'popular' | 'new' | 'featured' | 'soon'
   content: string | number
 }
 

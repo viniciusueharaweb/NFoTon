@@ -58,7 +58,7 @@ export const Wrapper = styled.div<WrapperProps>`
   border-radius: 0.25rem;
   box-sizing: border-box;
 
-  ${({ theme, variant, color }) => variants[variant][color](theme)}
+  ${({ theme, variant, color }) => variants[variant!][color!](theme)}
 
   & > span {
     font-size: 0.75rem;
