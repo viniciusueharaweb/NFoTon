@@ -39,7 +39,7 @@ export const ThemeProvider = ({ children }: ThemeProps) => {
         changeSelectedTheme,
       }}
     >
-      <StyledProvider theme={theme}>{children}</StyledProvider>
+      <StyledProvider theme={contextTheme}>{children}</StyledProvider>
     </ThemeContext.Provider>
   )
 }
