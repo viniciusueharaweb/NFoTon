@@ -2,7 +2,7 @@ import { Meta, Story } from '@storybook/react'
 
 import Notifications from '.'
 
-import notifications from '../../mock/notifications'
+import notificationsMock from '../../mock/notifications'
 
 export default {
   title: 'Components/Notifications',
@@ -10,9 +10,11 @@ export default {
   argTypes: {},
 } as Meta
 
-const Template: Story = () => <Notifications notifications={notifications} />
+const Template: Story = ({ notifications }) => <Notifications notifications={notifications} />
 
-export const HelloTemplate = Template.bind({})
+export const NotificationsTemplate = Template.bind({})
 
-HelloTemplate.parameters = {}
-HelloTemplate.args = {}
+NotificationsTemplate.parameters = {}
+NotificationsTemplate.args = {
+  notifications: notificationsMock,
+}

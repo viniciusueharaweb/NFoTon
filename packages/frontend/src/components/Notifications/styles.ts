@@ -20,18 +20,28 @@ export const TitleContainer = styled.div`
   padding: 0 1rem;
 
   h2 {
-    color: ${({ theme }) => theme.typography.color};
+    color: ${({ theme }) => theme.colors.neutrals.black['400']};
     font-size: 2rem;
     letter-spacing: -0.01em;
+    transition: 0.5s;
   }
 
   button {
-    background-color: ${({ theme }) => theme.buttons.primary.backgroundColor};
-    color: ${({ theme }) => theme.buttons.primary.color};
+    background-color: ${({ theme }) => theme.colors.primary.blue};
+    color: ${({ theme }) => theme.colors.neutrals.white['400']};
     padding: 12px 16px;
     font-size: 0.875rem;
     border-radius: 90px;
+    transition: 0.5s;
   }
+
+  ${({ theme }) =>
+    theme.variant === 'dark' &&
+    css`
+      h2 {
+        color: ${({ theme }) => theme.colors.neutrals.white['400']};
+      }
+    `};
 `
 
 interface DropdownProps {
@@ -44,7 +54,7 @@ export const Dropdown = styled.nav<DropdownProps>`
   display: flex;
   flex-direction: column;
   border-radius: 24px;
-  background-color: ${({ theme }) => theme.background.primary};
+  background-color: ${({ theme }) => theme.colors.neutrals.white['400']};
   box-shadow: 0px 16px 64px -48px rgba(31, 47, 70, 0.4);
   padding: 40px 1rem;
   position: absolute;
@@ -56,6 +66,12 @@ export const Dropdown = styled.nav<DropdownProps>`
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+
+  ${({ theme }) =>
+    theme.variant === 'dark' &&
+    css`
+      background-color: ${({ theme }) => theme.colors.neutrals.black['500']};
+    `};
 
   ${({ isActive }) =>
     isActive &&
@@ -102,7 +118,12 @@ export const Notification = styled.button`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.notifications.hover};
+    background-color: ${({ theme }) => theme.colors.neutrals.white['500']};
+    ${({ theme }) =>
+      theme.variant === 'dark' &&
+      css`
+        background-color: ${({ theme }) => theme.colors.neutrals.black['400']};
+      `};
   }
 
   > img {
@@ -120,13 +141,30 @@ export const NotificationTextContent = styled.div`
 export const NotificationTitle = styled.span`
   font-weight: 500;
   font-size: 1rem;
-  color: ${({ theme }) => theme.notifications.typography.color.title};
+  color: ${({ theme }) => theme.colors.neutrals.black['500']};
+  ${({ theme }) =>
+    theme.variant === 'dark' &&
+    css`
+      color: ${({ theme }) => theme.colors.neutrals.white['400']};
+    `};
 `
+
 export const NotificationSubtitle = styled.span`
   font-size: 0.875rem;
-  color: ${({ theme }) => theme.notifications.typography.color.subtitle};
+  color: ${({ theme }) => theme.colors.neutrals.gray['600']};
+  ${({ theme }) =>
+    theme.variant === 'dark' &&
+    css`
+      color: ${({ theme }) => theme.colors.neutrals.white['400']};
+    `};
 `
+
 export const NotificationDate = styled.span`
   font-size: 0.75rem;
-  color: ${({ theme }) => theme.notifications.typography.color.date};
+  color: ${({ theme }) => theme.colors.neutrals.gray['500']};
+  ${({ theme }) =>
+    theme.variant === 'dark' &&
+    css`
+      color: ${({ theme }) => theme.colors.neutrals.gray['500']};
+    `};
 `

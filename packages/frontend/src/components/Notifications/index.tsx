@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { MouseEvent, useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { RiNotificationLine } from 'react-icons/ri'
 import { useTheme } from '../../hooks/useTheme'
 import {
@@ -30,7 +30,9 @@ export default function Notifications({ notifications }: NotificationsProps) {
   const [isNotificationsActive, setIsNotificationsActive] = useState(false)
   const node = useRef<HTMLElement>(null)
   const {
-    theme: { background },
+    theme: {
+      colors: { neutrals },
+    },
   } = useTheme()
 
   const handleToggleNotifications = () => {
@@ -40,7 +42,7 @@ export default function Notifications({ notifications }: NotificationsProps) {
   return (
     <Container>
       <NotificationButton onClick={() => handleToggleNotifications()}>
-        <RiNotificationLine size={20} color={background.secondary} />
+        <RiNotificationLine size={20} color={neutrals.gray['500']} />
       </NotificationButton>
       <Dropdown ref={node} isActive={isNotificationsActive}>
         <TitleContainer>

@@ -1,6 +1,6 @@
 import { ThemeProvider } from '../src/hooks/useTheme'
 import { GlobalStyles } from '../src/styles/globalStyles'
-import variations from '../src/theme/index'
+import theme from '../src/theme/index'
 import * as nextImage from 'next/image'
 
 export const parameters = {
@@ -15,7 +15,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={variations.dark}>
+    <ThemeProvider theme={theme}>
       <Story />
       <GlobalStyles />
     </ThemeProvider>

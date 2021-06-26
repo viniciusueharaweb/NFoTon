@@ -11,7 +11,7 @@ export const Container = styled.header`
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
     height: 5rem;
     margin-top: 0;
-    border-color: ${({ theme }) => theme.background.border};
+    border-color: ${({ theme }) => theme.colors.neutrals.white['600']};
   }
 `
 
