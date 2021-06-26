@@ -41,7 +41,10 @@ export default function Notifications({ notifications }: NotificationsProps) {
 
   return (
     <Container>
-      <NotificationButton onClick={() => handleToggleNotifications()}>
+      <NotificationButton
+        hasNotifications={notifications.length !== 0}
+        onClick={() => handleToggleNotifications()}
+      >
         <RiNotificationLine size={20} color={neutrals.gray['500']} />
       </NotificationButton>
       <Dropdown ref={node} isActive={isNotificationsActive}>
