@@ -57,14 +57,14 @@ export const InputWrapper = styled.div<WrapperProps>`
       css`
         color: ${({ theme }) => theme.colors.neutrals.white['400']};
       `};
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 24px;
     width: 300px;
     background-color: transparent;
     outline: none;
     height: 48px;
     padding: 14px 58px 14px 16px;
-    border: 2px solid white;
+    border: 2px solid;
     border-radius: 50px;
     ${({ theme, variant }) => variant && variants[variant!](theme)}
 
@@ -109,7 +109,7 @@ export const ErrorLabel = styled.div`
   width: 100%;
   position: absolute;
   top: 52px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 20px;
   background-color: ${({ theme }) => theme.colors.neutrals.white['400']};
